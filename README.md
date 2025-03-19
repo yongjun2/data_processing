@@ -1,28 +1,28 @@
 # Waterfall Data Processing Script
 
-## 📌 프로젝트 개요
-이 프로젝트는 **온도 및 채널별 데이터 처리**를 자동화하는 파이썬 스크립트입니다.  
-주어진 텍스트 파일에서 데이터를 추출한 후, **엑셀 파일의 특정 시트에 저장**하는 기능을 수행합니다.  
-이를 통해 **무선 통신 테스트 및 센서 데이터 분석에 활용**할 수 있습니다.
+## 📌 Project Overview
+This project automates **temperature and channel-specific data processing** using a Python script.  
+It extracts data from given text files and **updates specific sheets in an Excel file**.  
+This can be used for **wireless communication testing and sensor data analysis**.
 
 ---
 
-## 🚀 주요 기능
-- **온도 및 채널 데이터 자동 추출**  
-  - 파일명에서 **온도(TT_x_xx) 및 채널(CH_x)** 정보를 인식  
-  - 데이터를 정리하여 온도 및 채널별로 그룹화  
+## 🚀 Key Features
+- **Automatic Extraction of Temperature & Channel Data**  
+  - Identifies **temperature (TT_x_xx) and channel (CH_x)** information from filenames  
+  - Groups and organizes data based on temperature and channel  
 
-- **텍스트 파일에서 데이터 로드 및 전처리**  
-  - `[data]` 이후 데이터를 `pandas.DataFrame`으로 변환  
-  - `NaN` 값 처리 및 필요한 데이터 필터링  
+- **Loading and Preprocessing Data from Text Files**  
+  - Reads data from `[data]` section and converts it into a `pandas.DataFrame`  
+  - Handles `NaN` values and filters necessary data  
 
-- **엑셀 파일 특정 시트 업데이트**  
-  - 기존 `p5.xlsx` 파일을 로드  
-  - 특정 온도 및 채널 값에 맞는 **Waterfall_ch1_25**, **Waterfall_ch7_25** 등의 시트 업데이트  
+- **Updating Specific Sheets in an Excel File**  
+  - Loads the existing `p5.xlsx` file  
+  - Updates relevant sheets like **Waterfall_ch1_25**, **Waterfall_ch7_25**, etc., based on temperature and channel values  
 
-- **온도(25°C, -40°C, 85°C) 및 채널(1, 7)별 데이터 정리**  
-  - 데이터가 존재하는 경우만 엑셀 시트에 반영  
-  - 특정 온도 및 채널과 매칭되는 데이터를 자동 기록  
+- **Sorting Data by Temperature (25°C, -40°C, 85°C) and Channel (1, 7)**  
+  - Writes only available data to the Excel sheets  
+  - Automatically records data corresponding to the specific temperature and channel  
 
 ---
 
